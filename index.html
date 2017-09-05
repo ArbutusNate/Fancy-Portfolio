@@ -20,7 +20,10 @@
         </div>
       </div>
       <div class="round-cont carousel">
-          <div class="car-cont info-box"> what </div>
+          <div class="car-cont" id="info-box"> what </div>
+          <div class="car-cont" id="port-box"> what </div>
+          <div class="car-cont" id="social-box"> what </div>
+          <div class="car-cont" id="footer-box"> what </div>
       </div>
       <!-- Content "carousel" -->
       <!-- <div class="container socialbox">
@@ -61,6 +64,7 @@
       });
 
       window.addEventListener('scroll', function() {
+        console.log(window.pageYOffset);
         choreographer.runAnimationsAt(window.pageYOffset);
       });
     </script>

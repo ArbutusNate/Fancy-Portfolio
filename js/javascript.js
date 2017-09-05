@@ -1,21 +1,23 @@
 function calculateAnimations() {
+  var winH = window.innerHeight;
+  var fullH = winH * 4;
   return [
   // animate rings //
-    { range: [-1, window.innerHeight * 6],
+    { range: [-1, fullH],
       selectors: ['#namebox-outer-ring'],
       type: 'scale',
       style: 'transform:rotateZ',
       from: 0, to: -360,
       unit: 'deg'
     },
-    { range: [-1, window.innerHeight * 6],
+    { range: [-1, fullH],
       selectors: ['#namebox'],
       type: 'scale',
       style: 'transform:rotateZ',
       from: 0, to: 980,
       unit: 'deg'
     },
-    { range: [-1, window.innerHeight * 6],
+    { range: [-1, fullH],
       selectors: ['.brand'],
       type: 'scale',
       style: 'transform:rotateZ',
@@ -26,7 +28,7 @@ function calculateAnimations() {
       unit: 'deg'
     },
     // Rotates the main Carousel
-    { range: [-1, window.innerHeight * 6],
+    { range: [-1, fullH],
       selectors: ['.carousel'],
       type: 'scale',
       style: 'transform:rotateZ',
@@ -34,13 +36,20 @@ function calculateAnimations() {
       unit: 'deg'
     },
     // Counter-rotates the Content
-    { range: [-1, window.innerHeight * 6],
+    { range: [-1, fullH],
       selectors: ['.car-cont'],
       type: 'scale',
       style: 'transform:rotateZ',
       from: 0, to: 360,
       unit: 'deg'
     },
+    // Fade out info-box
+    { range: [winH * .4, winH * .6],
+      selectors: ['#info-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 1, to: 0
+    }
   ]
 }
 
