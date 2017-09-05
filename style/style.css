@@ -1,14 +1,13 @@
 body{
   background-color: #020202;
   overflow: auto;
-  /*margin: 0 0;*/
+  margin: 0 0;
 }
 
 .wrapper {
   display: flex;
   width: 100%;
-  height: 400vh;
-  flex-direction: column;
+  height: 600vh;
 }
 
 .scroll-overlay {
@@ -58,119 +57,24 @@ body{
   padding-left: 28px;
 }
 
-/*Mobile*/
-/*.background {
-  display: grid;
-  grid-template-columns: 40%;
-  grid-template-rows: 1fr 3fr 3fr 2fr 1fr;
-  grid-gap: 7px;
-  padding: 10px;
-  grid-template-areas:
-  "nb nb"
-  "content content"
-  "cb cb"
-  "social aside"
-  "ft ft";
-}*/
+.info-box {
+  background-image: URL("../assets/inv_frame.png");
+  background-size: 550px 230px;
+  background-repeat: no-repeat;
+  position: inherit;
+  height: 230px;
+  width: 550px;
+  margin-top: 705px;
+  margin-left: 1030px;
+}
 
-/*Tablet*/
-/*  @media (min-width: 767px){
-    .background{
-      display: grid;
-      grid-template-columns: 25%;
-      grid-template-rows: 40px 150px 100% 100%;
-      grid-gap: 10px;
-      grid-template-areas:
-      "nb nb"
-      "content content"
-      "cb cb"
-      "social aside"
-      "ft ft";
-    }
-    .navbtn{
-      height: 100%;
-    }
-    .socialimg {
-      width: 155px;
-      margin: 5px;
-    }
-    .cont2{
-      padding: 15px;
-    }
-  }*/
-
-/*Laptop*/
-/*  @media (min-width: 1000px){
-    .background {
-      display: grid;
-      grid-template-columns: 2fr 4fr 2fr;
-      grid-template-rows: 50px 150px 300px 50px;
-      grid-gap: 10px;
-      grid-template-areas:
-      "nb nb nb"
-      "content content content"
-      "social cb aside"
-      "ft ft ft";
-    }
-  }*/
-
-/*@media (min-width: 400px){
-  .background {
-    display: grid;
-    grid-template-columns: ;
-  }
-}*/
-
-/*.navbar{
-  grid-area: nb;
-  background-color: pink;
-  padding: 2px;
-}*/
-
-
-
-/*.navbtn{
-  height: 46px;
-  float: right;
-}*/
-
-/*.brand {
-  height: 50px;
-  line-height: 100%;
-  float: left;
-}*/
-
-.footer{
-  grid-area: ft;
+.carousel {
+  position: fixed;
   background-color: blue;
-}
-
-.cont1{
-  grid-area: content;
-  background-color: grey;
-}
-
-.cont2 {
-  grid-area: social;
-  background-color: teal;
-}
-
-.socialimg {
-  display: inline-block;
-  width: 45%;
-}
-
-.cont3 {
-  grid-area: aside;
-  background-color: chartreuse;
-  margin: 0px;
-}
-
-.cmdbox {
-  grid-area: cb;
-  background-color: brown;
-}
-
-.display {
-  background-color: black;
+  opacity: .5;
+  width: 1500px;
+  height: 1500px;
+  margin-left: -560px;
+  margin-top: -560px;
+  border: 5px dashed white;
 }
