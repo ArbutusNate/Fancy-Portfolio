@@ -1,0 +1,176 @@
+body{
+  background-color: #020202;
+  overflow: auto;
+  /*margin: 0 0;*/
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 400vh;
+  flex-direction: column;
+}
+
+.scroll-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: relative;
+}
+
+.round-cont {
+  border-radius: 50%;
+}
+
+#namebox-outer-ring {
+  position: fixed;
+  background-color: #020202;
+  width: 200px;
+  height: 200px;
+  border: 11px inset #260C1A;
+  margin: 30px;
+
+}
+
+#namebox {
+  background-color: #99F7AB;
+  width: 176px;
+  height: 176px;
+  border: 9px dashed #432E36;
+  /*position: absolute;*/
+  display: inline-block;
+  /*margin: 30px 30px;*/
+  margin: 3px 3px;
+}
+
+.brand {
+  background-color: #260C1A;
+  width: 170px;
+  height: 170px;
+  /*margin: auto;*/
+  margin-top: -13px;
+  margin-left: 3px;
+}
+
+#brand-text {
+  color: #5F4842;
+  padding-top: 74px;
+  padding-left: 28px;
+}
+
+/*Mobile*/
+/*.background {
+  display: grid;
+  grid-template-columns: 40%;
+  grid-template-rows: 1fr 3fr 3fr 2fr 1fr;
+  grid-gap: 7px;
+  padding: 10px;
+  grid-template-areas:
+  "nb nb"
+  "content content"
+  "cb cb"
+  "social aside"
+  "ft ft";
+}*/
+
+/*Tablet*/
+/*  @media (min-width: 767px){
+    .background{
+      display: grid;
+      grid-template-columns: 25%;
+      grid-template-rows: 40px 150px 100% 100%;
+      grid-gap: 10px;
+      grid-template-areas:
+      "nb nb"
+      "content content"
+      "cb cb"
+      "social aside"
+      "ft ft";
+    }
+    .navbtn{
+      height: 100%;
+    }
+    .socialimg {
+      width: 155px;
+      margin: 5px;
+    }
+    .cont2{
+      padding: 15px;
+    }
+  }*/
+
+/*Laptop*/
+/*  @media (min-width: 1000px){
+    .background {
+      display: grid;
+      grid-template-columns: 2fr 4fr 2fr;
+      grid-template-rows: 50px 150px 300px 50px;
+      grid-gap: 10px;
+      grid-template-areas:
+      "nb nb nb"
+      "content content content"
+      "social cb aside"
+      "ft ft ft";
+    }
+  }*/
+
+/*@media (min-width: 400px){
+  .background {
+    display: grid;
+    grid-template-columns: ;
+  }
+}*/
+
+/*.navbar{
+  grid-area: nb;
+  background-color: pink;
+  padding: 2px;
+}*/
+
+
+
+/*.navbtn{
+  height: 46px;
+  float: right;
+}*/
+
+/*.brand {
+  height: 50px;
+  line-height: 100%;
+  float: left;
+}*/
+
+.footer{
+  grid-area: ft;
+  background-color: blue;
+}
+
+.cont1{
+  grid-area: content;
+  background-color: grey;
+}
+
+.cont2 {
+  grid-area: social;
+  background-color: teal;
+}
+
+.socialimg {
+  display: inline-block;
+  width: 45%;
+}
+
+.cont3 {
+  grid-area: aside;
+  background-color: chartreuse;
+  margin: 0px;
+}
+
+.cmdbox {
+  grid-area: cb;
+  background-color: brown;
+}
+
+.display {
+  background-color: black;
+}

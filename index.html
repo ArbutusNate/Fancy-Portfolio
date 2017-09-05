@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <title>Nathan Crawford, WebDev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="scroll-overlay"></div>
+      <div class="round-cont" id="namebox-outer-ring">
+        <div class="round-cont" id="namebox">
+          <div class="round-cont brand">
+            <p id="brand-text">Nathan Crawford</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container socialbox">
+        <img class="socialimg" src="./assets/inIcon.png">
+        <img class="socialimg" src="./assets/gitIcon.png">
+        <img class="socialimg" src="./assets/stackIcon.png">
+        <img class="socialimg" src="./assets/twitIcon.png"></img>
+      </div>
+      <div class="container cont3">
+        Projects
+        <div>link to project</div>
+        <div>link to project</div>
+        <div>link to project</div>
+      </div>
+      <div class="cont4">
+      </div>
+      <div class="container cmdbox">
+        <div class="display">
+        </div>
+        <label for="cmdline"></label>
+        <input type="text" name="cmdline" class="cmdline">
+      </div> -->
+
+      <div class="container footer">
+      </div>
+    </div>
+  <!-- Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script src="js/choreographer.min.js"></script>
+    <<script>
+    // var wrapperNode = document.getElementById('wrapper')
+    // var scrollDownNode = document.querySelector('.scroll-down')
+    // var linkNodes = document.querySelector('.links')
+
+    // var vh = window.innerHeight
+
+    // var fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight
+
+    function calculateAnimations() {
+      return [
+      // animate rings //
+        { range: [-1, window.innerHeight * 4],
+          selectors: ['#namebox-outer-ring'],
+          type: 'scale',
+          style: 'transform:rotateZ',
+          from: 0, to: -360,
+          unit: 'deg'
+        },
+        { range: [-1, window.innerHeight * 4],
+          selectors: ['#namebox'],
+          type: 'scale',
+          style: 'transform:rotateZ',
+          from: 0, to: 980,
+          unit: 'deg'
+        },
+        { range: [-1, window.innerHeight * 4],
+          selectors: ['.brand'],
+          type: 'scale',
+          style: 'transform:rotateZ',
+          //stationary name
+          from: 0, to: -620,
+          //for slow, downward rotation
+          // from: 0, to: -510,
+          unit: 'deg'
+        }
+      ]
+    }
+
+      var choreographer = new Choreographer({
+        animations: calculateAnimations(),
+      });
+
+      window.addEventListener('scroll', function() {
+        choreographer.runAnimationsAt(window.pageYOffset);
+      });
+    </script>
+  </body>
+</html>
