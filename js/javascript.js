@@ -43,9 +43,22 @@ function calculateAnimations() {
       from: 0, to: 360,
       unit: 'deg'
     },
-    // Fade out info-box
-    { range: [winH * .4, winH * .6],
+    // info-box
+    { range: [-1, winH * .6],
       selectors: ['#info-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 1, to: 0
+    },
+    // port-box
+    { range: [-1, winH * .7],
+      selectors: ['#port-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 0, to: 1
+    },
+    { range: [winH * 1.2, winH * 1.8],
+      selectors: ['#port-box'],
       type: 'scale',
       style: 'opacity',
       from: 1, to: 0

@@ -2,6 +2,7 @@ body{
   background-color: #020202;
   overflow: auto;
   margin: 0 0;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .wrapper {
@@ -88,7 +89,7 @@ body{
   margin-left: 590px;
 }
 
-#special-box {
-  margin-top: 1185px;
-  margin-left: 590px;
+#social-box {
+  margin-top: 1027px;
+  margin-left: 105px;
 }
