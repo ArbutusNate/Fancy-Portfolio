@@ -25,13 +25,22 @@ function calculateAnimations() {
       // from: 0, to: -510,
       unit: 'deg'
     },
+    // Rotates the main Carousel
     { range: [-1, window.innerHeight * 6],
       selectors: ['.carousel'],
       type: 'scale',
       style: 'transform:rotateZ',
-      from: 0, to: -720,
+      from: 0, to: -360,
       unit: 'deg'
-    }
+    },
+    // Counter-rotates the Content
+    { range: [-1, window.innerHeight * 6],
+      selectors: ['.car-cont'],
+      type: 'scale',
+      style: 'transform:rotateZ',
+      from: 0, to: 360,
+      unit: 'deg'
+    },
   ]
 }
 

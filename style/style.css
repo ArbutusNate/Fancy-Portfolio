@@ -70,8 +70,8 @@ body{
 
 .carousel {
   position: fixed;
-  background-color: blue;
-  opacity: .5;
+  /*background-color: blue;*/
+  /*opacity: .1;*/
   width: 1500px;
   height: 1500px;
   margin-left: -560px;

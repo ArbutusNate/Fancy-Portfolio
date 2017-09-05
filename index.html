@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="round-cont carousel">
-          <div class="info-box"> what </div>
+          <div class="car-cont info-box"> what </div>
       </div>
       <!-- Content "carousel" -->
       <!-- <div class="container socialbox">
@@ -56,37 +56,6 @@
     // var vh = window.innerHeight
 
     // var fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight
-
-    function calculateAnimations() {
-      return [
-      // animate rings //
-        { range: [-1, window.innerHeight * 4],
-          selectors: ['#namebox-outer-ring'],
-          type: 'scale',
-          style: 'transform:rotateZ',
-          from: 0, to: -360,
-          unit: 'deg'
-        },
-        { range: [-1, window.innerHeight * 4],
-          selectors: ['#namebox'],
-          type: 'scale',
-          style: 'transform:rotateZ',
-          from: 0, to: 980,
-          unit: 'deg'
-        },
-        { range: [-1, window.innerHeight * 4],
-          selectors: ['.brand'],
-          type: 'scale',
-          style: 'transform:rotateZ',
-          //stationary name
-          from: 0, to: -620,
-          //for slow, downward rotation
-          // from: 0, to: -510,
-          unit: 'deg'
-        }
-      ]
-    }
-
       var choreographer = new Choreographer({
         animations: calculateAnimations(),
       });
