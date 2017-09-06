@@ -116,6 +116,10 @@ body{
   width: 630px;
 }
 
+#nav-list {
+  margin-top: 80px;
+}
+
 a{
   width: 110px;
   height: 110px;
@@ -134,4 +138,8 @@ p{
 
 h3 {
   margin-top: 15px;
+}
+
+li {
+  color: gainsboro;
 }
