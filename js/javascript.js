@@ -19,6 +19,7 @@ let animateScrolling = (destPage, optTimer) => {
 };
 
 function myCallback() {
+  // debugger;
   isScrolling = false;
   console.log("isScrolling now set to False")
   return
@@ -77,7 +78,7 @@ $(document).ready(function(){
   window.addEventListener('scroll', function() {
     choreographer.runAnimationsAt(window.pageYOffset);
     if(!isScrolling && !clicked){
-      console.log("scrollDecider running, isScrolling set to true.");
+      console.log("scrollDecider running, isScrolling set to true. pIndex = " + pIndex);
       return scrollDecider();
     }
   });
@@ -97,19 +98,25 @@ $('#nav-info').on("click", () => {
   pIndex = 0;
   clicked = true;
   isScrolling = true;
+  console.log("clicked")
   setTimeout(afterTimeout, 2200)
   return animateScrolling(pageIndex[pIndex], 3000);
 })
 
 $('#nav-port').on("click", () => {
   pIndex = 1;
+  clicked = true;
   isScrolling = true;
+  // console.log("clicked")
   setTimeout(afterTimeout, 2200)
   return animateScrolling(450, 3000);
 })
 
 $('#nav-cont').on("click", () => {
   pIndex = 2;
+  clicked = true;
+  isScrolling = true;
+  // console.log("clicked")
   setTimeout(afterTimeout, 2200)
   return animateScrolling(pageIndex[pIndex], 3000);
 })
