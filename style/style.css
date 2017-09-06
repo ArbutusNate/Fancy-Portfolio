@@ -8,6 +8,7 @@ body{
 
 .wrapper {
   display: flex;
+  /*overflow: hidden;*/
   width: 100%;
   /*CHANGE THIS IF YOU CHANGE fullH IN JAVASCRIPT*/
   height: 400vh;
@@ -32,6 +33,7 @@ body{
   height: 200px;
   border: 11px inset #260C1A;
   margin: 30px;
+  z-index: 3;
 }
 
 #namebox {
@@ -121,6 +123,7 @@ h1 {
 
 #port-cont p{
   margin-bottom: -10px;
+  color: gainsboro;
 }
 
 h3 {

@@ -79,24 +79,26 @@
 
     <<script>
       let pIndex = 0,
-        win = $('window'),
         isScrolling = false,
         winOffset = window.pageYOffset;
 
-      let pageIndex = [0, 450, 760, 1930];
+      let pageIndex = [0, 450, 810, 1930];
 
       let animateScrolling = (destPage) => {
-        console.log('scrolling to ' + destPage);
+        // if(optIndex != null){
+        //   pIndex = optIndex;
+        // };
         $('body').animate({ scrollTop: destPage }, 2000, () => {
           isScrolling = false;
-          console.log(pIndex);
         });
+
       };
 
       let choreographer = new Choreographer({
         animations: calculateAnimations(),
       });
 
+      // SNAP SCROLLING
       window.addEventListener('scroll', () => {
         winOffset = window.pageYOffset;
         if(!isScrolling){
@@ -132,9 +134,14 @@
           }
         }
         choreographer.runAnimationsAt(window.pageYOffset);
-
       });
 
+      // Brand to home
+      $('.brand').on('click', () => {
+        console.log('clicked')
+        isScrolling = true;
+        animateScrolling(-1)
+      })
     </script>
   </body>
 </html>
