@@ -10,7 +10,7 @@
   <body>
     <!-- Main Wrapper for scrolling -->
     <div class="wrapper">
-      <div class="scroll-overlay"></div>
+      <!-- <div class="scroll-overlay"></div> -->
       <!-- Brand and Animated Rings -->
         <div class="round-cont" id="namebox-outer-ring">
           <div class="round-cont" id="namebox">
@@ -62,28 +62,80 @@
 
     <<script>
       // const options = {
-      //   panelSelector: '.car-cont'
+      //   panelSelector: '.car-cont',
+      //   // scrollSpeed: 550,
+      //   setHeights: false,
+      //   // offset: -100,
+      //   slideSpeed: 200
       // };
 
-      // jQuery(($) => {
-      //   $('.wrapper').panelSnap(options);
+      // jQuery(function($) {
+      //   $('body').panelSnap(options);
       // });
+
       // $(function() {
       //   $.scrollify({
       //     section : ".car-cont",
-      //     // offset: -97,
-      //     // scrollbars: false,
+      //     // offset: -40,
+      //     scrollbars: false,
       //     scrollSpeed: 50
       //   });
       // });
+      let pIndex = 0,
+        win = $('window'),
+        isScrolling = false,
+        winOffset = window.pageYOffset;
+
+      let pageIndex = [0, 480, 840, 1930];
+
+      function animateScrolling(destPage) {
+        console.log('scrolling to ' + destPage);
+        $('body').animate({ scrollTop: destPage }, 2000, () => {
+          isScrolling = false;
+          console.log(pIndex);
+        });
+      };
 
       let choreographer = new Choreographer({
         animations: calculateAnimations(),
       });
 
       window.addEventListener('scroll', () => {
-        // console.log(window.pageYOffset);
+        winOffset = window.pageYOffset;
+        if(!isScrolling){
+          if(pIndex === 0 && winOffset > 3 && winOffset < 431) {
+            pIndex = 1;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+          if(pIndex === 1 && winOffset < pageIndex[pIndex]) {
+            pIndex = 0;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+          if(pIndex === 1 && winOffset > pageIndex[pIndex]) {
+            pIndex = 2;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+          if(pIndex === 2 && winOffset < pageIndex[pIndex]) {
+            pIndex = 1;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+          if(pIndex === 2 && winOffset > pageIndex[pIndex]) {
+            pIndex = 3;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+          if(pIndex === 3 && winOffset < pageIndex[pIndex]) {
+            pIndex = 2;
+            isScrolling = true;
+            return animateScrolling(pageIndex[pIndex]);
+          }
+        }
         choreographer.runAnimationsAt(window.pageYOffset);
+
       });
 
     </script>

@@ -50,6 +50,18 @@ const calculateAnimations = () => {
       style: 'opacity',
       from: 1, to: 0
     },
+    { range: [winH * .1, winH * .6],
+      selectors: ['#info-box'],
+      type: 'scale',
+      style: 'transform:scaleX',
+      from: 1, to: .5
+    },
+    { range: [winH * .1, winH * .6],
+      selectors: ['#info-box'],
+      type: 'scale',
+      style: 'transform:scaleY',
+      from: 1, to: .5
+    },
     // port-box
     { range: [-1, winH * .7],
       selectors: ['#port-box'],
@@ -57,10 +69,34 @@ const calculateAnimations = () => {
       style: 'opacity',
       from: 0, to: 1
     },
+    { range: [-1, winH * .7],
+      selectors: ['#port-box'],
+      type: 'scale',
+      style: 'transform:scaleX',
+      from: .5, to: 1
+    },
+    { range: [-1, winH * .7],
+      selectors: ['#port-box'],
+      type: 'scale',
+      style: 'transform:scaleY',
+      from: .5, to: 1
+    },
     { range: [winH * .9, winH * 1.3],
       selectors: ['#port-box'],
       type: 'scale',
       style: 'opacity',
+      from: 1, to: 0
+    },
+    { range: [winH * .9, winH * 1.3],
+      selectors: ['#port-box'],
+      type: 'scale',
+      style: 'transform:scaleX',
+      from: 1, to: 0
+    },
+    { range: [winH * .9, winH * 1.3],
+      selectors: ['#port-box'],
+      type: 'scale',
+      style: 'transform:scaleY',
       from: 1, to: 0
     },
     // social-box
@@ -70,11 +106,23 @@ const calculateAnimations = () => {
       style: 'opacity',
       from: 0, to: 0
     },
-    { range: [winH * .71, winH * 1.2],
+    { range: [winH * .8, winH * 1.2],
       selectors: ['#social-box'],
       type: 'scale',
       style: 'opacity',
       from: 0, to: 1
+    },
+        { range: [winH * .71, winH * 1.2],
+      selectors: ['#social-box'],
+      type: 'scale',
+      style: 'transform:scaleX',
+      from: .5, to: 1
+    },
+        { range: [winH * .71, winH * 1.2],
+      selectors: ['#social-box'],
+      type: 'scale',
+      style: 'transform:scaleY',
+      from: .5, to: 1
     },
     { range: [winH * 1.4, winH * 1.7],
       selectors: ['#social-box'],
