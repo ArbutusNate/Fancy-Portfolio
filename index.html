@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css" type="text/css" />
-    <title>Nathan Crawford, WebDev</title>
+    <title>Nathan Crawford | WebDev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
@@ -28,7 +28,18 @@
         <!-- PORTFOLIO -->
           <div class="car-cont" id="port-box">
             <h1>Some of my Projects</h1>
-            <a href="https://arthub-project.herokuapp.com/">Arthub</a>
+              <div id="port-cont">
+                <a href="https://arthub-project.herokuapp.com/">
+                  <h3>Arthub</h3>
+                </a>
+                <p>A creative and collaborative art creation and sharing webapp.</p>
+                <br>
+                <a href="https://arbutusnate.github.io/GiphyAPI/">
+                  <h3>GiphyAPI</h3><br>
+                  <p>A Giphy API frontend with fun styling.</p>
+                </a><br>
+              </div>
+
           </div>
         <!-- SOCIAL BOX -->
           <div class="car-cont" id="social-box">
@@ -46,7 +57,7 @@
               <img class="socialimg" src="./assets/stackIcon.png">
             </a>
           <!-- GITHUB -->
-            <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+            <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
               <img class="socialimg" src="./assets/twitIcon.png">
             </a>
           </div>
@@ -61,26 +72,6 @@
 
 
     <<script>
-      // const options = {
-      //   panelSelector: '.car-cont',
-      //   // scrollSpeed: 550,
-      //   setHeights: false,
-      //   // offset: -100,
-      //   slideSpeed: 200
-      // };
-
-      // jQuery(function($) {
-      //   $('body').panelSnap(options);
-      // });
-
-      // $(function() {
-      //   $.scrollify({
-      //     section : ".car-cont",
-      //     // offset: -40,
-      //     scrollbars: false,
-      //     scrollSpeed: 50
-      //   });
-      // });
       let pIndex = 0,
         win = $('window'),
         isScrolling = false,
@@ -88,7 +79,7 @@
 
       let pageIndex = [0, 480, 840, 1930];
 
-      function animateScrolling(destPage) {
+      let animateScrolling = (destPage) => {
         console.log('scrolling to ' + destPage);
         $('body').animate({ scrollTop: destPage }, 2000, () => {
           isScrolling = false;
