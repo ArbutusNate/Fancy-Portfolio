@@ -89,6 +89,11 @@
 
       let pageIndex = [0, 450, 795, 1930];
 
+      let choreographer = new Choreographer({
+        animations: calculateAnimations()
+      })
+
+
       let animateScrolling = (destPage) => {
         console.log('scrolling to ' + destPage);
         $('body').animate({ scrollTop: destPage }, 2000, () => {
@@ -97,47 +102,56 @@
         });
       };
 
-      let choreographer = new Choreographer({
-        animations: calculateAnimations(),
-      });
-
-      window.addEventListener('scroll', (event) => {
-        // event.preventDefault();
+      let scrollDecider = () => {
         winOffset = window.pageYOffset;
-        if(!isScrolling){
-          if(pIndex === 0 && winOffset > 3 && winOffset < 431) {
-            pIndex = 1;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
+          if(!isScrolling){
+            if(pIndex === 0 && winOffset > 3 && winOffset < 431) {
+              pIndex = 1;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
+            if(pIndex === 1 && winOffset < pageIndex[pIndex]) {
+              pIndex = 0;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
+            if(pIndex === 1 && winOffset > pageIndex[pIndex]) {
+              pIndex = 2;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
+            if(pIndex === 2 && winOffset < pageIndex[pIndex]) {
+              pIndex = 1;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
+            if(pIndex === 2 && winOffset > pageIndex[pIndex]) {
+              pIndex = 3;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
+            if(pIndex === 3 && winOffset < pageIndex[pIndex]) {
+              pIndex = 2;
+              isScrolling = true;
+              return animateScrolling(pageIndex[pIndex]);
+            }
           }
-          if(pIndex === 1 && winOffset < pageIndex[pIndex]) {
-            pIndex = 0;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
-          }
-          if(pIndex === 1 && winOffset > pageIndex[pIndex]) {
-            pIndex = 2;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
-          }
-          if(pIndex === 2 && winOffset < pageIndex[pIndex]) {
-            pIndex = 1;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
-          }
-          if(pIndex === 2 && winOffset > pageIndex[pIndex]) {
-            pIndex = 3;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
-          }
-          if(pIndex === 3 && winOffset < pageIndex[pIndex]) {
-            pIndex = 2;
-            isScrolling = true;
-            return animateScrolling(pageIndex[pIndex]);
+      }
+
+      function throttle(fn, wait) {
+        var time = Date.now();
+        return function() {
+          if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
           }
         }
-        choreographer.runAnimationsAt(window.pageYOffset);
+      }
 
+      window.addEventListener('scroll', throttle(scrollDecider, 1000));
+
+      window.addEventListener('scroll', function() {
+        choreographer.runAnimationsAt(window.pageYOffset);
       });
 
       $('.brand').on("click", () => {
