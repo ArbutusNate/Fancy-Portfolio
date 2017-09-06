@@ -16,6 +16,9 @@
           <div class="round-cont" id="namebox">
             <div class="round-cont brand">
               <p id="brand-text">Nathan Crawford</p>
+              <div class="nav-info">
+                <p id="brand-text" >Arbutusnate@gmail.com</p>
+              </div>
             </div>
           </div>
         </div>
@@ -24,6 +27,7 @@
         <!-- INFO BOX -->
             <div class="car-cont" id="info-box">
               <h1>Info</h1>
+              <p>I am a positive, creative person with a life-long love of technology. I love working with Javascript in all it's "unique" forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by express or Require.</p>
             </div>
         <!-- PORTFOLIO -->
           <div class="car-cont" id="port-box">
@@ -83,7 +87,7 @@
         isScrolling = false,
         winOffset = window.pageYOffset;
 
-      let pageIndex = [0, 450, 760, 1930];
+      let pageIndex = [0, 450, 795, 1930];
 
       let animateScrolling = (destPage) => {
         console.log('scrolling to ' + destPage);
@@ -136,6 +140,7 @@
       });
 
       $('.brand').on("click", () => {
+        console.log("clicked");
         isScrolling = true;
         animateScrolling(0);
         pIndex = 0;
