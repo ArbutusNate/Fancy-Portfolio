@@ -5,11 +5,19 @@ body{
   font-family: 'Press Start 2P', cursive;
 }
 
+a{
+  z-index: 100;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
   /*CHANGE THIS IF YOU CHANGE fullH IN JAVASCRIPT*/
   height: 400vh;
+  scroll-snap-type: mandatory;
+  /* older spec implementation */
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
 }
 
 .scroll-overlay {
@@ -61,8 +69,6 @@ body{
 
 .carousel {
   position: fixed;
-  /*background-color: blue;*/
-  /*opacity: .1;*/
   width: 1500px;
   height: 1500px;
   margin-left: -560px;
@@ -77,6 +83,7 @@ body{
   position: inherit;
   height: 230px;
   width: 550px;
+  padding: 10px 30px;
 }
 
 #info-box {
@@ -91,7 +98,16 @@ body{
 }
 
 #social-box {
-  margin-top: 1027px;
+  margin-top: 1080px;
   margin-left: 105px;
   opacity: 0;
+}
+
+.socialimg {
+  width: 110px;
+  height: 110px;
+  margin-top: 12px;
+}
+h1 {
+  font-size: 23px;
 }

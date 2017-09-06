@@ -19,58 +19,50 @@
           </div>
         </div>
       </div>
+    <!-- CAROUSEL -->
       <div class="round-cont carousel">
+        <!-- INFO BOX -->
           <div class="car-cont" id="info-box">
             <h1>Info</h1>
           </div>
+        <!-- PORTFOLIO -->
           <div class="car-cont" id="port-box">
             <h1>Some of my Projects</h1>
+            <a href="https://arthub-project.herokuapp.com/">Arthub</a>
           </div>
+        <!-- SOCIAL BOX -->
           <div class="car-cont" id="social-box">
             <h1>Get in Touch!</h1>
+          <!-- LINKED IN -->
+            <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/inIcon.png">
+            </a>
+          <!-- GITHUB -->
+            <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/gitIcon.png">
+            </a>
+          <!-- StackOverflow -->
+            <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/stackIcon.png">
+            </a>
+          <!-- GITHUB -->
+            <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/twitIcon.png">
+            </a>
           </div>
-          <!-- <div class="car-cont" id="footer-box"> what </div> -->
       </div>
-      <!-- Content "carousel" -->
-      <!-- <div class="container socialbox">
-        <img class="socialimg" src="./assets/inIcon.png">
-        <img class="socialimg" src="./assets/gitIcon.png">
-        <img class="socialimg" src="./assets/stackIcon.png">
-        <img class="socialimg" src="./assets/twitIcon.png"></img>
-      </div>
-      <div class="container cont3">
-        Projects
-        <div>link to project</div>
-        <div>link to project</div>
-        <div>link to project</div>
-      </div>
-      <div class="cont4">
-      </div>
-      <div class="container cmdbox">
-        <div class="display">
-        </div>
-        <label for="cmdline"></label>
-        <input type="text" name="cmdline" class="cmdline">
-      </div> -->
     </div>
   <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
     <script src="js/choreographer.min.js"></script>
     <<script>
-    // var wrapperNode = document.getElementById('wrapper')
-    // var scrollDownNode = document.querySelector('.scroll-down')
-    // var linkNodes = document.querySelector('.links')
-
-    // var vh = window.innerHeight
-
-    // var fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight
       var choreographer = new Choreographer({
         animations: calculateAnimations(),
       });
 
       window.addEventListener('scroll', function() {
-        console.log(window.pageYOffset);
+        // console.log(window.pageYOffset);
         choreographer.runAnimationsAt(window.pageYOffset);
       });
 
