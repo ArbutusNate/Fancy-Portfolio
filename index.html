@@ -22,9 +22,9 @@
     <!-- CAROUSEL -->
       <div class="round-cont carousel">
         <!-- INFO BOX -->
-          <div class="car-cont" id="info-box">
-            <h1>Info</h1>
-          </div>
+            <div class="car-cont" id="info-box">
+              <h1>Info</h1>
+            </div>
         <!-- PORTFOLIO -->
           <div class="car-cont" id="port-box">
             <h1>Some of my Projects</h1>
@@ -56,12 +56,22 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
     <script src="js/choreographer.min.js"></script>
+    <script src="js/jquery.panelSnap.js"></script>
+
     <<script>
-      var choreographer = new Choreographer({
+      const options = {
+        panelSelector: '> div'
+      };
+
+      jQuery(($) => {
+        $('.wrapper').panelSnap(options);
+      });
+
+      let choreographer = new Choreographer({
         animations: calculateAnimations(),
       });
 
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', () => {
         // console.log(window.pageYOffset);
         choreographer.runAnimationsAt(window.pageYOffset);
       });

@@ -1,6 +1,6 @@
-function calculateAnimations() {
-  var winH = window.innerHeight;
-  var fullH = winH * 4;
+const calculateAnimations = () => {
+  let winH = window.innerHeight;
+  let fullH = winH * 4;
   return [
   // animate rings //
     { range: [-1, fullH],
@@ -70,13 +70,13 @@ function calculateAnimations() {
       style: 'opacity',
       from: 0, to: 0
     },
-    { range: [winH * .81, winH * 1.2],
+    { range: [winH * .71, winH * 1.2],
       selectors: ['#social-box'],
       type: 'scale',
       style: 'opacity',
       from: 0, to: 1
     },
-    { range: [winH * 1.4, winH * 1.9],
+    { range: [winH * 1.4, winH * 1.7],
       selectors: ['#social-box'],
       type: 'scale',
       style: 'opacity',

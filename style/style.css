@@ -5,19 +5,18 @@ body{
   font-family: 'Press Start 2P', cursive;
 }
 
-a{
+/*a{
   z-index: 100;
-}
+}*/
 
 .wrapper {
   display: flex;
   width: 100%;
   /*CHANGE THIS IF YOU CHANGE fullH IN JAVASCRIPT*/
   height: 400vh;
+  scroll-snap-points-y: repeat(1000px);
   scroll-snap-type: mandatory;
-  /* older spec implementation */
-  scroll-snap-destination: 0% 100%;
-  scroll-snap-points-x: repeat(100%);
+  scroll-snap-destination: 25% 25% 25% 25%;
 }
 
 .scroll-overlay {
