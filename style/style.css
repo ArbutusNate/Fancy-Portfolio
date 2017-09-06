@@ -87,9 +87,11 @@ body{
 #port-box {
   margin-top: 1185px;
   margin-left: 590px;
+  opacity: 0;
 }
 
 #social-box {
   margin-top: 1027px;
   margin-left: 105px;
+  opacity: 0;
 }

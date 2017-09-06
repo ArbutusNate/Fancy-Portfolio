@@ -44,7 +44,7 @@ function calculateAnimations() {
       unit: 'deg'
     },
     // info-box
-    { range: [-1, winH * .6],
+    { range: [winH * .1, winH * .6],
       selectors: ['#info-box'],
       type: 'scale',
       style: 'opacity',
@@ -57,8 +57,27 @@ function calculateAnimations() {
       style: 'opacity',
       from: 0, to: 1
     },
-    { range: [winH * 1.2, winH * 1.8],
+    { range: [winH * .9, winH * 1.3],
       selectors: ['#port-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 1, to: 0
+    },
+    // social-box
+    { range: [-1, winH * .8],
+      selectors: ['#social-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 0, to: 0
+    },
+    { range: [winH * .81, winH * 1.2],
+      selectors: ['#social-box'],
+      type: 'scale',
+      style: 'opacity',
+      from: 0, to: 1
+    },
+    { range: [winH * 1.4, winH * 1.9],
+      selectors: ['#social-box'],
       type: 'scale',
       style: 'opacity',
       from: 1, to: 0
