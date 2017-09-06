@@ -12,13 +12,13 @@
     <div class="wrapper">
       <div class="scroll-overlay"></div>
       <!-- Brand and Animated Rings -->
-      <div class="round-cont" id="namebox-outer-ring">
-        <div class="round-cont" id="namebox">
-          <div class="round-cont brand">
-            <p id="brand-text">Nathan Crawford</p>
+        <div class="round-cont" id="namebox-outer-ring">
+          <div class="round-cont" id="namebox">
+            <div class="round-cont brand">
+              <p id="brand-text">Nathan Crawford</p>
+            </div>
           </div>
         </div>
-      </div>
     <!-- CAROUSEL -->
       <div class="round-cont carousel">
         <!-- INFO BOX -->
@@ -33,15 +33,15 @@
         <!-- SOCIAL BOX -->
           <div class="car-cont" id="social-box">
             <h1>Get in Touch!</h1>
-          <!-- LINKED IN -->
+          <!-- LINKED IN @ LOCATION (0,0)-->
             <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
               <img class="socialimg" src="./assets/inIcon.png">
             </a>
-          <!-- GITHUB -->
+          <!-- GITHUB @ LOCATION (0,475)-->
             <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
               <img class="socialimg" src="./assets/gitIcon.png">
             </a>
-          <!-- StackOverflow -->
+          <!-- StackOverflow @ LOCATION (0,847)-->
             <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
               <img class="socialimg" src="./assets/stackIcon.png">
             </a>
@@ -57,15 +57,25 @@
     <script type="text/javascript" src="js/javascript.js"></script>
     <script src="js/choreographer.min.js"></script>
     <script src="js/jquery.panelSnap.js"></script>
+    <script src="js/jquery.scrollify.min.js"></script>
+
 
     <<script>
-      const options = {
-        panelSelector: '> div'
-      };
+      // const options = {
+      //   panelSelector: '.car-cont'
+      // };
 
-      jQuery(($) => {
-        $('.wrapper').panelSnap(options);
-      });
+      // jQuery(($) => {
+      //   $('.wrapper').panelSnap(options);
+      // });
+      // $(function() {
+      //   $.scrollify({
+      //     section : ".car-cont",
+      //     // offset: -97,
+      //     // scrollbars: false,
+      //     scrollSpeed: 50
+      //   });
+      // });
 
       let choreographer = new Choreographer({
         animations: calculateAnimations(),
