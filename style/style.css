@@ -100,12 +100,12 @@ body{
 .socialimg {
   width: 110px;
   height: 110px;
-  margin-top: 12px;
+  margin-top: 25px;
 }
 
 #port-cont{
   height: 230px;
-  width: 510px;
+  width: 630px;
 }
 
 a{
@@ -116,9 +116,13 @@ a{
 
 h1 {
   font-size: 15px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+}
+
+#port-cont p{
+  margin-bottom: -10px;
 }
 
 h3 {
-  margin-top: 10px;
+  margin-top: 15px;
 }
