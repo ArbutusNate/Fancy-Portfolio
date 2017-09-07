@@ -71,7 +71,17 @@ h3 {
   font-family: 'Press Start 2P', cursive;
 }
 
-#brand-text {
+#brand-text-large {
+  color: #5F4842;
+  padding-top: 67px;
+  padding-left: 28px;
+}
+
+#brand-text-small {
+  display: none;
+}
+
+#email {
   color: #5F4842;
   padding-top: 67px;
   padding-left: 28px;
