@@ -1,6 +1,5 @@
 // DECLARE VARIABLES
 let pIndex = 0;
-// let win = $('window');
 let isScrolling = false;
 let clicked = false;
 let winOffset = window.pageYOffset;
@@ -19,7 +18,6 @@ let animateScrolling = (destPage, optTimer) => {
 };
 
 function myCallback() {
-  // debugger;
   isScrolling = false;
   console.log("isScrolling now set to False")
   return
@@ -27,7 +25,6 @@ function myCallback() {
 
 let scrollDecider = () => {
   winOffset = window.pageYOffset;
-    // if(!isScrolling){
       if(pIndex === 0 && winOffset > 3 && winOffset < 431) {
         pIndex = 1;
         isScrolling = true;
@@ -75,6 +72,12 @@ let scrollDecider = () => {
 
 // window.addEventListener('scroll', throttle(scrollDecider, 2100));
 $(document).ready(function(){
+  isScrolling = true;
+  clicked = true;
+  $('body').animate({ scrollTop: 0 }, function(){
+    isScrolling = false;
+    clicked = false;
+  });
   window.addEventListener('scroll', function() {
     choreographer.runAnimationsAt(window.pageYOffset);
     if(!isScrolling && !clicked){
@@ -98,7 +101,7 @@ $('#nav-info').on("click", () => {
   pIndex = 0;
   clicked = true;
   isScrolling = true;
-  console.log("clicked")
+  // console.log("clicked")
   setTimeout(afterTimeout, 2200)
   return animateScrolling(pageIndex[pIndex], 3000);
 })
