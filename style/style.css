@@ -152,14 +152,14 @@ li {
     }
   /*CONTACT*/
     #social-box {
-      margin-top: 1080px;
-      margin-left: 105px;
+      margin-top: 1105px;
+      margin-left: 154px;
       opacity: 0;
     }
 
     .socialimg {
       width: 110px;
       height: 110px;
-      margin-top: 25px;
-      margin: 0px 9px;
+      /*margin-top: 25px;*/
+      margin: 0px 9px 10px 9px;
     }
