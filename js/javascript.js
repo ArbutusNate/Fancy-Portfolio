@@ -90,12 +90,12 @@ $(document).ready(function(){
 
 
 
-// $('.brand-text').on("click", () => {
-//   console.log("clicked");
-//   pIndex = 0;
-//   setTimeout(isScrolling = true, 2100)
-//   return animateScrolling(pageIndex[pIndex], 2100);
-// })
+$('.brand-text').on("click", () => {
+  console.log("clicked");
+  pIndex = 0;
+  setTimeout(isScrolling = true, 1100)
+  return animateScrolling(pageIndex[pIndex], 500);
+})
 
 $('#nav-info').on("click", () => {
   pIndex = 0;
@@ -103,7 +103,7 @@ $('#nav-info').on("click", () => {
   isScrolling = true;
   // console.log("clicked")
   setTimeout(afterTimeout, 2200)
-  return animateScrolling(pageIndex[pIndex], 3000);
+  return animateScrolling(pageIndex[pIndex], 500);
 })
 
 $('#nav-port').on("click", () => {
@@ -112,7 +112,7 @@ $('#nav-port').on("click", () => {
   isScrolling = true;
   // console.log("clicked")
   setTimeout(afterTimeout, 2200)
-  return animateScrolling(450, 3000);
+  return animateScrolling(450, 500);
 })
 
 $('#nav-cont').on("click", () => {
@@ -121,7 +121,7 @@ $('#nav-cont').on("click", () => {
   isScrolling = true;
   // console.log("clicked")
   setTimeout(afterTimeout, 2200)
-  return animateScrolling(pageIndex[pIndex], 3000);
+  return animateScrolling(pageIndex[pIndex], 500);
 })
 
 function afterTimeout(){
