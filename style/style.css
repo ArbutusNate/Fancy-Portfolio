@@ -127,8 +127,6 @@ li {
 /*PAGES*/
   /*INFO*/
     #info-box {
-      margin-top: 705px;
-      margin-left: 1030px;
     }
 
     #info-text {
@@ -136,10 +134,7 @@ li {
     }
   /*PORT*/
     #port-box {
-      margin-top: 1135px;
-      margin-left: 615px;
-      padding-bottom: 35px;
-      opacity: 0;
+
     }
 
     #port-cont{
@@ -152,14 +147,10 @@ li {
     }
   /*CONTACT*/
     #social-box {
-      margin-top: 1105px;
-      margin-left: 154px;
-      opacity: 0;
     }
 
     .socialimg {
       width: 110px;
       height: 110px;
-      /*margin-top: 25px;*/
       margin: 0px 9px 10px 9px;
     }
