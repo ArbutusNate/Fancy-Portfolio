@@ -18,7 +18,7 @@ const calculateAnimations = () => {
       unit: 'deg'
     },
     { range: [-1, fullH],
-      selectors: ['.brand'],
+      selectors: ['.brand_1'],
       type: 'scale',
       style: 'transform:rotateZ',
       //stationary name
