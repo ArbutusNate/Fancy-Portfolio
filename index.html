@@ -7,9 +7,6 @@
     <!-- THINGS TO ALWAYS LOAD -->
       <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Crete+Round|Philosopher" rel="stylesheet">
-      <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
     <!-- THINGS TO LOAD FOR MOBILE -->
       <link rel="stylesheet" media="screen and (max-device-width: 481px)" href="style/mobile.css" />
     <!-- THINGS TO LOAD FOR DESKTOP -->
@@ -17,11 +14,13 @@
   </head>
   <body>
     <!-- Main Wrapper for scrolling -->
+    <div class="wrapper">
+      <!-- <div class="scroll-overlay"></div> -->
       <!-- Brand and Animated Rings -->
       <div class="header">
         <div class="round-cont" id="namebox-outer-ring">
           <div class="round-cont" id="namebox">
-            <div class="round-cont brand_1">
+            <div class="round-cont brand">
               <p id="brand-text-large">Nathan Crawford</p>
               <p id="brand-text-small">NC</p>
               <div class="nav-info">
@@ -36,48 +35,53 @@
           </div>
         </div>
       </div>
-      <!-- <div class="container"> -->
-          <!-- INFO BOX -->
-        <div class="row" id="info-box">
-          <h1>Info</h1>
-          <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
-        </div>
-      <!-- PORTFOLIO -->
-        <div class="row" id="port-box">
-          <h1>Some of my Projects</h1><br>
-            <div id="port-cont">
-              <a href="https://arthub-project.herokuapp.com/" target="_blank"><h3>Arthub</h3></a>
-                <p class="port-text">A creative and collaborative art creation and sharing webapp.</p>
-              <br>
-              <a href="https://arbutusnate.github.io/GiphyAPI/" target="_blank"><h3>GiphyAPI</h3></a>
-                <p class="port-text">A Giphy API frontend with fun styling.</p>
-              <br>
-              <a href="https://arbutusnate.github.io/Verge/" target="_blank"><h3>Verge</h3></a>
-                <p class="port-text">A text adventure with a homebrew, opensource system.</p>
-              <br>
-            </div>
-        </div>
-      <!-- SOCIAL BOX -->
-        <div class="row" id="social-box">
-          <h1>Get in Touch!</h1>
-          <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/inIcon.png">
-          </a>
-          <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/gitIcon.png">
-          </a>
-          <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/stackIcon.png">
-          </a>
-          <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/twitIcon.png">
-          </a>
-        </div>
+    <!-- CAROUSEL -->
+      <div class="round-cont carousel">
+        <!-- INFO BOX -->
+          <div class="car-cont" id="info-box">
+            <h1>Info</h1>
+            <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
+          </div>
+        <!-- PORTFOLIO -->
+          <div class="car-cont" id="port-box">
+            <h1>Some of my Projects</h1><br>
+              <div id="port-cont">
+                <a href="https://arthub-project.herokuapp.com/" target="_blank"><h3>Arthub</h3></a>
+                  <p class="port-text">A creative and collaborative art creation and sharing webapp.</p>
+                <br>
+                <a href="https://arbutusnate.github.io/GiphyAPI/" target="_blank"><h3>GiphyAPI</h3></a>
+                  <p class="port-text">A Giphy API frontend with fun styling.</p>
+                <br>
+                <a href="https://arbutusnate.github.io/Verge/" target="_blank"><h3>Verge</h3></a>
+                  <p class="port-text">A text adventure with a homebrew, opensource system.</p>
+                <br>
+              </div>
 
+          </div>
+        <!-- SOCIAL BOX -->
+          <div class="car-cont" id="social-box">
+            <h1>Get in Touch!</h1>
+          <!-- LINKED IN @ LOCATION (0,0)-->
+            <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/inIcon.png">
+            </a>
+          <!-- GITHUB @ LOCATION (0,475)-->
+            <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/gitIcon.png">
+            </a>
+          <!-- StackOverflow @ LOCATION (0,847)-->
+            <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/stackIcon.png">
+            </a>
+          <!-- GITHUB -->
+            <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/twitIcon.png">
+            </a>
+          </div>
+      </div>
+    </div>
   <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="js/choreographer.min.js"></script>
     <script src="js/jquery.scrollify.min.js"></script>
     <script type="text/javascript" src="js/calculateAnimations.js"></script>
