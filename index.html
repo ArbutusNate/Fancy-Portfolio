@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css" type="text/css" />
-    <title>Nathan Crawford | WebDev</title>
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Philosopher" rel="stylesheet">
+    <title>Nathan Crawford | WebDev</title>
+    <!-- THINGS TO ALWAYS LOAD -->
+      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Crete+Round|Philosopher" rel="stylesheet">
+    <!-- THINGS TO LOAD FOR MOBILE -->
+      <link rel="stylesheet" media="screen and (max-device-width: 481px)" href="style/mobile.css" />
+    <!-- THINGS TO LOAD FOR DESKTOP -->
+      <link rel="stylesheet" media="screen and (min-device-width: 600px)" href="style/style.css" type="text/css" />
   </head>
   <body>
     <!-- Main Wrapper for scrolling -->
+    <div class="wrapper">
+      <!-- <div class="scroll-overlay"></div> -->
       <!-- Brand and Animated Rings -->
+      <div class="header">
         <div class="round-cont" id="namebox-outer-ring">
           <div class="round-cont" id="namebox">
-
             <div class="round-cont brand">
-              <p id="brand-text">Nathan Crawford</p>
+              <p id="brand-text-large">Nathan Crawford</p>
+              <p id="brand-text-small">NC</p>
               <div class="nav-info">
-                <p id="brand-text" >Arbutusnate@gmail.com</p>
+                <p id="email">Arbutusnate@gmail.com</p>
               </div>
               <ul id="nav-list">
                 <li id="nav-info"> Info </li>
                 <li id="nav-port"> Portfolio </li>
                 <li id="nav-cont"> Contact </li>
-            </ul>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
     <!-- CAROUSEL -->
       <div class="round-cont carousel">
         <!-- INFO BOX -->
-            <div class="car-cont" id="info-box">
-              <h1>Info</h1>
-              <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
-            </div>
+          <div class="car-cont" id="info-box">
+            <h1>Info</h1>
+            <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
+          </div>
         <!-- PORTFOLIO -->
           <div class="car-cont" id="port-box">
             <h1>Some of my Projects</h1><br>
@@ -49,12 +57,32 @@
                 <br>
               </div>
 
+          </div>
+        <!-- SOCIAL BOX -->
+          <div class="car-cont" id="social-box">
+            <h1>Get in Touch!</h1>
+          <!-- LINKED IN @ LOCATION (0,0)-->
+            <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/inIcon.png">
+            </a>
+          <!-- GITHUB @ LOCATION (0,475)-->
+            <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/gitIcon.png">
+            </a>
+          <!-- StackOverflow @ LOCATION (0,847)-->
+            <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/stackIcon.png">
+            </a>
+          <!-- GITHUB -->
+            <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
+              <img class="socialimg" src="./assets/twitIcon.png">
+            </a>
+          </div>
+      </div>
+    </div>
   <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="js/choreographer.min.js"></script>
-    <script src="js/jquery.panelSnap.js"></script>
     <script src="js/jquery.scrollify.min.js"></script>
     <script type="text/javascript" src="js/calculateAnimations.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
