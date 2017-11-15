@@ -23,6 +23,8 @@ const calculateAnimations = () => {
       style: 'transform:rotateZ',
       //stationary name
       from: 0, to: -620,
+      //for slow, downward rotation
+      // from: 0, to: -510,
       unit: 'deg'
     },
   ]
