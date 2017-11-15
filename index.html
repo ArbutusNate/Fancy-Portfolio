@@ -16,64 +16,90 @@
       <link rel="stylesheet" media="screen and (min-device-width: 600px)" href="style/style.css" type="text/css" />
   </head>
   <body>
-    <!-- Main Wrapper for scrolling -->
-      <!-- Brand and Animated Rings -->
-      <div class="header">
-        <div class="round-cont" id="namebox-outer-ring">
-          <div class="round-cont" id="namebox">
-            <div class="round-cont brand_1">
-              <p id="brand-text-large">Nathan Crawford</p>
-              <p id="brand-text-small">NC</p>
-              <div class="nav-info">
-                <p id="email">Arbutusnate@gmail.com</p>
+      <div class="row">
+        <div class="col s3">
+          <div class="round-cont" id="namebox-outer-ring">
+            <div class="round-cont" id="namebox">
+              <div class="round-cont brand_1">
+                <p id="brand-text-large">Nathan Crawford</p>
+                <p id="brand-text-small">NC</p>
+                <div class="nav-info">
+                  <p id="email">Arbutusnate@gmail.com</p>
+                </div>
+                <ul id="nav-list">
+                  <li id="nav-info"> Info </li>
+                  <li id="nav-port"> Portfolio </li>
+                  <li id="nav-cont"> Contact </li>
+                </ul>
               </div>
-              <ul id="nav-list">
-                <li id="nav-info"> Info </li>
-                <li id="nav-port"> Portfolio </li>
-                <li id="nav-cont"> Contact </li>
-              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col s9">
+          <div class="row">
+
+            <div class="row cont-row" id="port-box">
+              <h1>Info</h1>
+              <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
+            </div>
+
+            <div class="row cont-row" id="port-box">
+              <h1>Some of my Projects</h1><br>
+                <div id="port-cont">
+                  <a href="https://game-vault.herokuapp.com/" target="_blank"><h3>GameVault</h3></a>
+                    <p class="port-text">Node.js with Express server, React and Materialize front end, MongoDB with mongoose backend. A great place for board gamers to store and share their collections.</p>
+                  <br>
+                  <a href="https://arthub-project.herokuapp.com/" target="_blank"><h3>Arthub</h3></a>
+                    <p class="port-text">A creative and collaborative art creation and sharing webapp.</p>
+                  <br>
+                  <a href="https://arbutusnate.github.io/Verge/" target="_blank"><h3>Verge</h3></a>
+                    <p class="port-text">A text adventure with a homebrew, opensource system.</p> 
+                </div>
+            </div>
+
+            <div class="row cont-row" id="port-box">
+              <h1>Get in Touch!</h1>
+              <div class="col s4">
+                <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
+                  <img class="socialimg" src="./assets/inIcon.png">
+                </a>
+              </div>
+              <div class="col s4">
+                <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
+                  <img class="socialimg" src="./assets/gitIcon.png">
+                </a>
+              </div>
+              <div class="col s4">
+                <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
+                  <img class="socialimg" src="./assets/stackIcon.png">
+                </a>
+              </div>
+              <div class="col s4">
+                <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
+                  <img class="socialimg" src="./assets/twitIcon.png">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="container"> -->
-          <!-- INFO BOX -->
-        <div class="row" id="info-box">
-          <h1>Info</h1>
-          <p id="info-text">I am a positive, creative person with a life-long love of technology. I love working with Javascript in all its unique forms - writing interesting, engaging, and responsive front-ends with bootstrap or custom JS, concise node servers, and middleware fueled by Express or Require.</p>
-        </div>
-      <!-- PORTFOLIO -->
-        <div class="row" id="port-box">
-          <h1>Some of my Projects</h1><br>
-            <div id="port-cont">
-              <a href="https://arthub-project.herokuapp.com/" target="_blank"><h3>Arthub</h3></a>
-                <p class="port-text">A creative and collaborative art creation and sharing webapp.</p>
-              <br>
-              <a href="https://arbutusnate.github.io/GiphyAPI/" target="_blank"><h3>GiphyAPI</h3></a>
-                <p class="port-text">A Giphy API frontend with fun styling.</p>
-              <br>
-              <a href="https://arbutusnate.github.io/Verge/" target="_blank"><h3>Verge</h3></a>
-                <p class="port-text">A text adventure with a homebrew, opensource system.</p>
-              <br>
-            </div>
-        </div>
-      <!-- SOCIAL BOX -->
-        <div class="row" id="social-box">
-          <h1>Get in Touch!</h1>
-          <a href="https://www.linkedin.com/in/nate-crawford/" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/inIcon.png">
-          </a>
-          <a href="https://github.com/ArbutusNate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/gitIcon.png">
-          </a>
-          <a href="https://stackoverflow.com/users/7833943/arbutusnate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/stackIcon.png">
-          </a>
-          <a href="https://twitter.com/ArbutusNate" target="_blank" class="socialframe">
-            <img class="socialimg" src="./assets/twitIcon.png">
-          </a>
-        </div>
+    <div class="container">
+      <div class="row">
+    <!-- Main Wrapper for scrolling -->
+      <!-- Brand and Animated Rings -->
+        <div class="col s1 m1 l1">
 
+        </div>
+        <div class="col s9">
+      <!-- INFO BOX -->
+
+      <!-- PORTFOLIO -->
+
+      <!-- SOCIAL BOX -->
+
+        </div>
+      </div>
+    </div>
   <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
